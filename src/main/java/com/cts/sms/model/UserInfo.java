@@ -26,7 +26,7 @@ public class UserInfo implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "userkey", unique = true, nullable = false)
-	private int userKey;
+	private Long userKey;
 	
 	@Column(name = "userid")
 	private String userid;
@@ -69,11 +69,11 @@ public class UserInfo implements Serializable {
 		return confirmPassword;
 	}
 
-	public int getUserKey() {
+	public Long getUserKey() {
 		return userKey;
 	}
 
-	public void setUserKey(int userKey) {
+	public void setUserKey(Long userKey) {
 		this.userKey = userKey;
 	}
 
